@@ -29,7 +29,7 @@ resource "aws_security_group" "k3s-sg" {
 resource "aws_security_group_rule" "custom-rules" {
   for_each = var.security_group_rules
 
-  description        = each.value.description
+  description       = each.value.description
   type              = each.value.type
   from_port         = each.value.from_port
   to_port           = each.value.to_port
